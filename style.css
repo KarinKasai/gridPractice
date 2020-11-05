@@ -1,0 +1,302 @@
+/******************** DEFAULTS **********************/
+
+body {
+    /* max-width: 1200px; */
+    font-family: 'Josefin Sans', 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.8px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 18px;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    background-image: linear-gradient(to right, #fcf8f8 0%, #dddcdd 51%, #cac9ca 100%);
+    padding: 8px 10px;
+    text-align: right;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 20px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+   
+}
+
+/******************** STRUCTURE *****************/
+
+/*************************************************/
+
+/********************* TOP PAGE ******************/
+
+/*************************************************/
+
+/**------ Navigation START------**/
+
+/** navigation layout with flexbox **/
+
+nav, .navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.logo {
+    width: 35%;
+    margin: auto 0 auto 30px;
+}
+
+nav {
+    height: 70px;
+}
+
+nav ul {
+    margin: auto 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 30px 0 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+nav ul a {
+    color: rgb(105, 105, 107);
+    text-decoration: none;
+}
+
+/**------ Navigation END------**/
+
+/**------ Hero START------**/
+
+.hero {
+    background-image: url(img/top.jpg);
+    height: 90vh;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 12%;
+}
+
+.hero2 {
+    width: 45%;
+    position: absolute;
+    top: 42%;
+    left: 15%;
+}
+
+.hero-text h2 {
+    margin: 0 auto 20px auto;
+    font-size: 40px;
+    color: rgb(211, 65, 155);
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: 100px;
+    color: rgb(211, 65, 155);
+}
+
+/**------ Hero END------**/
+
+/*************************************************/
+/******************* MAIN SECTION *****************/
+/*************************************************/
+
+/**------ Article START------**/
+
+main {
+    margin-top: 170px;
+}
+
+main h1 {
+    text-align: center;
+}
+
+/** article layout with using grid **/
+.article {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(600px, auto);
+    grid-gap: 1em;
+    margin: 0 auto;
+}
+
+.article_box {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .14);
+    
+}
+
+.article img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.article_box h3 {
+    font-size: 20px;
+    height: 80px;
+    padding: 0;
+    margin: 15px 15px 0 15px;
+}
+
+.article_box p {
+    height: 100px;
+    padding: 15px 0 0 0;
+    margin: 0 15px;
+    border-top: 1px solid rgb(187, 185, 185);
+}
+
+
+
+/**------ Article END------**/
+
+/**------ Breed Profile START------**/
+
+/** Breed Profile layout with using grid **/
+
+.profile_title {
+    margin-top: 170px;
+}
+
+/* why are there small gap between div and div? Seems there's no margin or padding*/
+/* how can I put content center without changing position of the images? */
+.profile {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-auto-rows: 120px;
+    /* justify-items: center; */
+    /* align-items: center; */
+}
+
+.profile img {
+    object-fit: cover;
+    width: 100%;
+    height: 330px;
+}
+
+.profile_1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    background-image: url(img/largedog.jpeg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+
+}
+.profile_6 {
+    grid-column: 3/5;
+    grid-row: 3/5;
+    background-image: url(img/mediumdog.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+
+}
+
+.profile_11 {
+    grid-column: 1/3;
+    grid-row: 5/7;
+    background-image: url(img/smalldog.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+
+.discription h3{
+    text-align: center;
+    margin: 40px;
+}
+
+.discription p{
+    margin: 20px;
+}
+
+.profile_subtitle {
+    font-size: 70px;
+    color: rgb(211, 65, 155);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.discription a {
+    text-decoration: none;
+    color: black;
+
+}
+
+
+/**------ Breed Profile END------**/
+
+
+/*************************************************/
+/******************* FOOTER *****************/
+/*************************************************/
+
+
+.footer img {
+    width: 10%;
+    
+}
+
+.footer {
+    margin-top: 180px;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    justify-items: center;
+}
+
+footer ul {
+    margin: 0 auto;
+}
+
+footer ul li {
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+footer ul a {
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 50px;
+}
